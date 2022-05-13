@@ -5,17 +5,17 @@ export interface State {
 }
 
 export default createStore<State>({
-    modules: {},
-    state() {
-        return {
-            count: 0,
-        };
+  modules: {},
+  state() {
+    return {
+      count: 0,
+    };
+  },
+  mutations: {
+    increment(state) {
+      state.count += 1;
     },
-    mutations: {
-        increment(state) {
-            state.count++;
-        },
-    },
-    getters: {},
-    actions: {},
+  },
+  getters: {},
+  actions: {},
 });

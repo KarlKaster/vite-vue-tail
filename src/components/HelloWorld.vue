@@ -17,6 +17,8 @@ console.log(store.state.count);
 </script>
 
 <template>
+<div>
+
     <h1>{{ msg }}</h1>
     <p>
         Recommended IDE setup:
@@ -41,6 +43,7 @@ console.log(store.state.count);
         Edit
         <code>components/HelloWorld.vue</code> to test hot module replacement.
     </p>
+    </div>
 </template>
 
 <style scoped lang="scss">
