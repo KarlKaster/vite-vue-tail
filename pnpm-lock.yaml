@@ -4,6 +4,7 @@ specifiers:
   '@vitejs/plugin-vue': ^2.3.3
   autoprefixer: ^10.4.7
   postcss: ^8.4.13
+  sass: ^1.51.0
   tailwindcss: ^3.0.24
   typescript: ^4.5.4
   vite: ^2.9.9
@@ -19,9 +20,10 @@ devDependencies:
   '@vitejs/plugin-vue': 2.3.3_vite@2.9.9+vue@3.2.33
   autoprefixer: 10.4.7_postcss@8.4.13
   postcss: 8.4.13
+  sass: 1.51.0
   tailwindcss: 3.0.24
   typescript: 4.6.4
-  vite: 2.9.9
+  vite: 2.9.9_sass@1.51.0
   vue-tsc: 0.34.13_typescript@4.6.4
 
 packages:
@@ -72,7 +74,7 @@ packages:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.9.9
+      vite: 2.9.9_sass@1.51.0
       vue: 3.2.33
     dev: true
 
@@ -598,6 +600,10 @@ packages:
       function-bind: 1.1.1
     dev: true
 
+  /immutable/4.0.0:
+    resolution: {integrity: sha512-zIE9hX70qew5qTUjSS7wi1iwj/l7+m54KWU247nhM3v806UdGj1yDndXj+IOYxxtW9zyLI+xqFNZjTuDaLUqFw==}
+    dev: true
+
   /is-binary-path/2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
@@ -792,6 +798,16 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
+  /sass/1.51.0:
+    resolution: {integrity: sha512-haGdpTgywJTvHC2b91GSq+clTKGbtkkZmVAb82jZQN/wTy6qs8DdFm2lhEQbEwrY0QDRgSQ3xDurqM977C3noA==}
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.0.0
+      source-map-js: 1.0.2
+    dev: true
+
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
@@ -859,7 +875,7 @@ packages:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
     dev: true
 
-  /vite/2.9.9:
+  /vite/2.9.9_sass@1.51.0:
     resolution: {integrity: sha512-ffaam+NgHfbEmfw/Vuh6BHKKlI/XIAhxE5QSS7gFLIngxg171mg1P3a4LSRME0z2ZU1ScxoKzphkipcYwSD5Ew==}
     engines: {node: '>=12.2.0'}
     hasBin: true
@@ -879,6 +895,7 @@ packages:
       postcss: 8.4.13
       resolve: 1.22.0
       rollup: 2.72.1
+      sass: 1.51.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true

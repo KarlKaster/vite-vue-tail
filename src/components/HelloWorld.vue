@@ -18,7 +18,6 @@ console.log(store.state.count);
 
 <template>
     <h1>{{ msg }}</h1>
-
     <p>
         Recommended IDE setup:
         <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
@@ -44,9 +43,11 @@ console.log(store.state.count);
     </p>
 </template>
 
-<style scoped>
-a {
-    color: #42b983;
+<style scoped lang="scss">
+p {
+    a {
+        color: #42b983;
+    }
 }
 
 label {
