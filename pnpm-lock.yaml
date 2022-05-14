@@ -11,6 +11,7 @@ specifiers:
   eslint-plugin-import: ^2.25.2
   eslint-plugin-tailwindcss: ^3.5.0
   eslint-plugin-vue: ^8.7.1
+  husky: ^8.0.1
   postcss: ^8.4.13
   postcss-html: ^1.4.1
   sass: ^1.51.0
@@ -45,6 +46,7 @@ devDependencies:
   eslint-plugin-import: 2.26.0_doddzorl55y6dbr5ij3nshfl64
   eslint-plugin-tailwindcss: 3.5.0
   eslint-plugin-vue: 8.7.1_eslint@8.15.0
+  husky: 8.0.1
   postcss: 8.4.13
   postcss-html: 1.4.1
   sass: 1.51.0
@@ -1668,6 +1670,12 @@ packages:
       domhandler: 4.3.1
       domutils: 2.8.0
       entities: 3.0.1
+    dev: true
+
+  /husky/8.0.1:
+    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /ignore/5.2.0:
