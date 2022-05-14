@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Icon } from '@iconify/vue';
 import { useStore } from 'vuex';
 
 interface Store {
@@ -19,6 +20,10 @@ console.log(store.state.count);
 
 <template>
     <div>
+        <div>
+            <Icon icon="mdi-light:home" class="m-auto" />
+        </div>
+
         <h1>{{ msg }}</h1>
         <p>
             Recommended IDE setup:
