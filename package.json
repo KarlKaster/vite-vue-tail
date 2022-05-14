@@ -9,7 +9,8 @@
         "lint": "pnpm run lint:ts && pnpm run lint:style",
         "lint:ts": "eslint --ext .ts,.vue --ignore-path .gitignore src",
         "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "lighthouse": "lighthouse http://localhost:4173/ --view"
     },
     "dependencies": {
         "axios": "^0.27.2",
