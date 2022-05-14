@@ -7,6 +7,7 @@ module.exports = {
     'airbnb-base',
     'plugin:vue/vue3-recommended',
     'plugin:tailwindcss/recommended',
+    'prettier',
   ],
   parserOptions: {
     ecmaVersion: 'latest',

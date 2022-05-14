@@ -7,6 +7,7 @@ specifiers:
   autoprefixer: ^10.4.7
   eslint: ^7.32.0 || ^8.2.0
   eslint-config-airbnb-base: ^15.0.0
+  eslint-config-prettier: ^8.5.0
   eslint-plugin-import: ^2.25.2
   eslint-plugin-tailwindcss: ^3.5.0
   eslint-plugin-vue: ^8.7.1
@@ -32,6 +33,7 @@ devDependencies:
   autoprefixer: 10.4.7_postcss@8.4.13
   eslint: 8.15.0
   eslint-config-airbnb-base: 15.0.0_gwd37gqv3vjv3xlpl7ju3ag2qu
+  eslint-config-prettier: 8.5.0_eslint@8.15.0
   eslint-plugin-import: 2.26.0_doddzorl55y6dbr5ij3nshfl64
   eslint-plugin-tailwindcss: 3.5.0
   eslint-plugin-vue: 8.7.1_eslint@8.15.0
@@ -971,6 +973,15 @@ packages:
       object.assign: 4.1.2
       object.entries: 1.1.5
       semver: 6.3.0
+    dev: true
+
+  /eslint-config-prettier/8.5.0_eslint@8.15.0:
+    resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: 8.15.0
     dev: true
 
   /eslint-import-resolver-node/0.3.6:
