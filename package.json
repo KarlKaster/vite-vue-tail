@@ -1,44 +1,45 @@
 {
-  "name": "setup",
-  "private": true,
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview",
-    "lint": "pnpm run lint:ts && pnpm run lint:style",
-    "lint:ts": "eslint --ext .ts,.vue --ignore-path .gitignore src",
-    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore"
-  },
-  "dependencies": {
-    "vue": "^3.2.25",
-    "vue-router": "4",
-    "vuex": "^4.0.2"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.23.0",
-    "@typescript-eslint/parser": "^5.23.0",
-    "@vitejs/plugin-vue": "^2.3.3",
-    "autoprefixer": "^10.4.7",
-    "eslint": "^7.32.0 || ^8.2.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-tailwindcss": "^3.5.0",
-    "eslint-plugin-vue": "^8.7.1",
-    "postcss": "^8.4.13",
-    "postcss-html": "^1.4.1",
-    "sass": "^1.51.0",
-    "stylelint": "^14.8.2",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-prettier-scss": "^0.0.1",
-    "stylelint-config-recommended-scss": "^6.0.0",
-    "stylelint-config-recommended-vue": "^1.4.0",
-    "stylelint-config-standard-scss": "^3.0.0",
-    "stylelint-config-standard-vue": "^1.0.0",
-    "tailwindcss": "^3.0.24",
-    "typescript": "^4.5.4",
-    "vite": "^2.9.9",
-    "vue-tsc": "^0.34.7"
-  }
+    "name": "setup",
+    "private": true,
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc --noEmit && vite build",
+        "preview": "vite preview",
+        "lint": "pnpm run lint:ts && pnpm run lint:style",
+        "lint:ts": "eslint --ext .ts,.vue --ignore-path .gitignore src",
+        "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "vue": "^3.2.25",
+        "vue-router": "4",
+        "vuex": "^4.0.2"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.23.0",
+        "@typescript-eslint/parser": "^5.23.0",
+        "@vitejs/plugin-vue": "^2.3.3",
+        "autoprefixer": "^10.4.7",
+        "eslint": "^7.32.0 || ^8.2.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.25.2",
+        "eslint-plugin-tailwindcss": "^3.5.0",
+        "eslint-plugin-vue": "^8.7.1",
+        "postcss": "^8.4.13",
+        "postcss-html": "^1.4.1",
+        "sass": "^1.51.0",
+        "stylelint": "^14.8.2",
+        "stylelint-config-prettier": "^9.0.3",
+        "stylelint-config-prettier-scss": "^0.0.1",
+        "stylelint-config-recommended-scss": "^6.0.0",
+        "stylelint-config-recommended-vue": "^1.4.0",
+        "stylelint-config-standard-scss": "^3.0.0",
+        "stylelint-config-standard-vue": "^1.0.0",
+        "tailwindcss": "^3.0.24",
+        "typescript": "^4.5.4",
+        "vite": "^2.9.9",
+        "vue-tsc": "^0.34.7"
+    }
 }

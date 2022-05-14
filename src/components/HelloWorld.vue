@@ -9,6 +9,7 @@ interface Store {
 }
 
 const store: Store = useStore();
+// eslint-disable-next-line no-undef
 defineProps<{ msg: string }>();
 
 console.log(store.state.count);
