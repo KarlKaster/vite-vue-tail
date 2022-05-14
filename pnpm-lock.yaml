@@ -8,6 +8,7 @@ specifiers:
   eslint: ^7.32.0 || ^8.2.0
   eslint-config-airbnb-base: ^15.0.0
   eslint-plugin-import: ^2.25.2
+  eslint-plugin-tailwindcss: ^3.5.0
   eslint-plugin-vue: ^8.7.1
   postcss: ^8.4.13
   sass: ^1.51.0
@@ -32,6 +33,7 @@ devDependencies:
   eslint: 8.15.0
   eslint-config-airbnb-base: 15.0.0_gwd37gqv3vjv3xlpl7ju3ag2qu
   eslint-plugin-import: 2.26.0_doddzorl55y6dbr5ij3nshfl64
+  eslint-plugin-tailwindcss: 3.5.0
   eslint-plugin-vue: 8.7.1_eslint@8.15.0
   postcss: 8.4.13
   sass: 1.51.0
@@ -1035,6 +1037,17 @@ packages:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
       - supports-color
+    dev: true
+
+  /eslint-plugin-tailwindcss/3.5.0:
+    resolution: {integrity: sha512-m1NyKX1qii3arb+zWrsNO5R15b27aaEm6m1ie9JM9a6yBrU9Q8H62obzT/U8PSITIucMY864uxljV8MiP7H6xg==}
+    engines: {node: '>=12.13.0'}
+    dependencies:
+      fast-glob: 3.2.11
+      postcss: 8.4.13
+      tailwindcss: 3.0.24
+    transitivePeerDependencies:
+      - ts-node
     dev: true
 
   /eslint-plugin-vue/8.7.1_eslint@8.15.0:

@@ -5,10 +5,17 @@ import HelloWorld from './components/HelloWorld.vue';
 </script>
 
 <template>
-    <router-view />
-    <div class="text-green-800 text-xl">Hello World</div>
-    <img alt="Vue logo" src="./assets/logo.png" class="m-auto" />
-    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <router-view />
+  <div class="text-xl text-green-800">
+    Hello World
+  </div>
+
+  <img
+    alt="Vue logo"
+    src="./assets/logo.png"
+    class="m-auto"
+  >
+  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
 
 <style>

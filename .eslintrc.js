@@ -4,8 +4,9 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'plugin:vue/essential',
     'airbnb-base',
+    'plugin:vue/vue3-recommended',
+    'plugin:tailwindcss/recommended',
   ],
   parserOptions: {
     ecmaVersion: 'latest',
