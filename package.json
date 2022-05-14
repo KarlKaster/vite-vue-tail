@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "pnpm run lint:ts && pnpm run lint:style",
+    "lint:ts": "eslint --ext .ts,.vue --ignore-path .gitignore src",
+    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore"
   },
   "dependencies": {
     "vue": "^3.2.25",
