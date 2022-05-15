@@ -5,6 +5,7 @@ module.exports = {
     },
     extends: [
         'airbnb-base',
+        'plugin:@typescript-eslint/recommended',
         'plugin:vue/vue3-recommended',
         'plugin:tailwindcss/recommended',
         'prettier',

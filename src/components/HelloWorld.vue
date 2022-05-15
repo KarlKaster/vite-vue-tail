@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue';
 import { useStore } from 'vuex';
+import { defineProps } from 'vue';
 
 interface Store {
     [x: string]: any;
     state: {
-        count: Number;
+        count: number;
     };
 }
 
 const store: Store = useStore();
-// eslint-disable-next-line no-undef
+
 defineProps<{ msg: string }>();
 
 console.log(store.state.count);
