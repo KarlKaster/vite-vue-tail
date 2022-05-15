@@ -17,7 +17,6 @@ module.exports = {
     plugins: ['vue', '@typescript-eslint'],
     rules: {
         'linebreak-style': 0,
-        'no-param-reassign': 'warn',
         'import/no-extraneous-dependencies': 0,
         'import/no-unresolved': 0,
         'import/extensions': 0,
