@@ -3,20 +3,11 @@ import { Icon } from '@iconify/vue';
 import { useStore } from 'vuex';
 import { defineProps } from 'vue';
 
-interface Store {
-    [x: string]: any;
-    state: {
-        count: number;
-    };
-}
-
-const store: Store = useStore();
+const store = useStore();
 
 defineProps<{ msg: string }>();
 
-console.log(store.state.count);
 store.commit('increment');
-console.log(store.state.count);
 </script>
 
 <template>
