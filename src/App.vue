@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import { inject } from 'vue'; // inject axios
+import axios from 'axios';
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue';
 
-// How to use axios
-const axios: any = inject('axios');
 axios
     .get('https://jsonplaceholder.typicode.com/todos/1')
     .then((res: any) => console.log(res));
