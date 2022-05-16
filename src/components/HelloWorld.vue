@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { defineProps } from 'vue';
 import { Icon } from '@iconify/vue';
 import { useStore } from 'vuex';
-import { defineProps } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 const store = useStore();
 
@@ -9,10 +10,16 @@ defineProps<{ msg: string }>();
 
 store.commit('increment');
 console.log(store.state.count);
+const { t, locale } = useI18n({ useScope: 'global' });
+function changeLocale() {
+    locale.value = 'en';
+}
 </script>
 
 <template>
     <div>
+        <p @click.prevent="changeLocale">{{ locale }}</p>
+        <p>{{ t('message.hello') }}</p>
         <div>
             <Icon icon="mdi-light:home" class="m-auto" />
         </div>
