@@ -18,6 +18,7 @@ function increment() {
 
 axios
     .get('https://jsonplaceholder.typicode.com/todos/1')
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     .then((res: any) => console.log(res));
 </script>
 

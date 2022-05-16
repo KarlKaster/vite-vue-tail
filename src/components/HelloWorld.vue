@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue';
 import { Icon } from '@iconify/vue';
 import { useStore } from 'vuex';
 import { useI18n } from 'vue-i18n';
