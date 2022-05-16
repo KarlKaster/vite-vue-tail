@@ -1,10 +1,14 @@
-import { createStore } from 'vuex';
+import Vuex from 'vuex';
+import VuexPersistence from 'vuex-persist';
 
+const vuexLocal = new VuexPersistence({
+    storage: window.localStorage,
+});
 export interface State {
     count: number;
 }
 
-export default createStore<State>({
+const store = new Vuex.Store<State>({
     modules: {},
     state() {
         return {
@@ -19,4 +23,7 @@ export default createStore<State>({
     },
     getters: {},
     actions: {},
+    plugins: [vuexLocal.plugin],
 });
+
+export default store;

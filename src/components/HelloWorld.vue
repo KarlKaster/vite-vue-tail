@@ -8,6 +8,7 @@ const store = useStore();
 defineProps<{ msg: string }>();
 
 store.commit('increment');
+console.log(store.state.count);
 </script>
 
 <template>
