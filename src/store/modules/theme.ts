@@ -13,14 +13,20 @@ export default {
     actions: {
         initTheme({ commit }: any) {
             const cachedTheme = localStorage.theme ? localStorage.theme : false;
+
             //  `true` if the user has set theme to `dark` on browser/OS
             const userPrefersDark = window.matchMedia(
                 '(prefers-color-scheme: dark)'
             ).matches;
+            console.log('initTheme ~ userPrefersDark', userPrefersDark);
 
-            if (cachedTheme) commit('SET_THEME', cachedTheme);
-            else if (userPrefersDark) commit('SET_THEME', 'dark');
-            else commit('SET_THEME', 'light');
+            if (cachedTheme) {
+                document.querySelector('html')?.classList.add(cachedTheme);
+            } else if (userPrefersDark) {
+                commit('SET_THEME', 'dark');
+            } else {
+                commit('SET_THEME', 'light');
+            }
         },
         toggleTheme({ commit }: any) {
             switch (localStorage.theme) {

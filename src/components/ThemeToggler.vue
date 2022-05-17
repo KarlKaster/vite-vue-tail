@@ -9,7 +9,12 @@ function toggleTheme() {
 </script>
 
 <template>
-    <button class="text-cyan-200 dark:text-red-400" @click="toggleTheme">
-        Theme Toggle
-    </button>
+    <div>
+        <button
+            class="p-2 text-cyan-600 dark:text-red-400 rounded-full border"
+            @click="toggleTheme"
+        >
+            Theme Toggle
+        </button>
+    </div>
 </template>

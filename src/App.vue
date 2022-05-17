@@ -1,17 +1,20 @@
 <script setup lang="ts">
-import { Field, Form, ErrorMessage } from 'vee-validate';
-import { reactive, onBeforeMount, watch } from 'vue';
-import * as yup from 'yup';
+import { onBeforeMount, watch } from 'vue';
 import axios from 'axios';
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { useStore } from 'vuex';
 import HelloWorld from './components/HelloWorld.vue';
 import ThemeToggler from './components/ThemeToggler.vue';
+import IncrementVue from './components/Increment.vue';
+import Form from './components/Form.vue';
+import Iconify from './components/Iconify.vue';
+import Internationalization from './components/I18n.vue';
 
 const store = useStore();
 
 onBeforeMount(() => {
+    console.log('Hello');
     store.dispatch('initTheme');
 });
 
@@ -26,15 +29,6 @@ watch(
     }
 );
 
-const state = reactive({
-    count: 0,
-    passwordRules: yup.string().required().min(8),
-});
-
-function increment() {
-    state.count += 1;
-}
-
 axios
     .get('https://jsonplaceholder.typicode.com/todos/1')
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -42,39 +36,17 @@ axios
 </script>
 
 <template>
-    <div>
-        <ThemeToggler />
-    </div>
-
-    <button @click="increment">
-        {{ state.count }}
-    </button>
+    <ThemeToggler class="m-4" />
+    <IncrementVue class="m-4" />
+    <Form class="m-4" />
+    <Iconify class="m-4" />
     <router-view />
-    <div class="text-xl text-green-800">Hello World</div>
-
-    <img alt="Vue logo" src="./assets/logo.png" class="m-auto" />
-    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-
-    <Form>
-        <div>
-            <label for="password">Password</label>
-        </div>
-        <Field
-            name="password"
-            type="password"
-            placeholder="Enter password..."
-            class="border"
-            :rules="state.passwordRules"
-        />
-        <ErrorMessage name="password" />
-    </Form>
+    <Internationalization class="m-4" />
+    <HelloWorld class="m-4" />
 </template>
 
 <style>
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     text-align: center;
     margin-top: 60px;
 }
