@@ -35,11 +35,20 @@ axios
 </script>
 
 <template>
+    <ul class="flex gap-1 justify-center items-center">
+        <li class="p-4 rounded-full border">
+            <router-link to="/home">Home</router-link>
+        </li>
+        <li class="p-4 rounded-full border">
+            <router-link to="/about">About</router-link>
+        </li>
+    </ul>
+
+    <router-view />
     <ThemeToggler class="m-4" />
     <IncrementVue class="m-4" />
     <Form class="m-4" />
     <Iconify class="m-4" />
-    <router-view />
     <Internationalization class="m-4" />
     <HelloWorld class="m-4" />
 </template>

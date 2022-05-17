@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n';
 
 const { t, locale } = useI18n({ useScope: 'global' });
 const state = reactive({
-    language: 'es',
+    language: 'en',
 });
 
 watch(state, (newState) => {
@@ -13,7 +13,7 @@ watch(state, (newState) => {
 </script>
 
 <template>
-    <div>
+    <div class="flex gap-2 justify-center">
         <select id="language" v-model="state.language" name="language">
             <option value="en">English</option>
             <option value="ja">Japanese</option>
