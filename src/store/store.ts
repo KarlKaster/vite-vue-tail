@@ -1,5 +1,6 @@
 import Vuex from 'vuex';
 import VuexPersistence from 'vuex-persist';
+import theme from './modules/theme';
 
 const vuexLocal = new VuexPersistence({
     storage: window.localStorage,
@@ -9,7 +10,9 @@ export interface State {
 }
 
 const store = new Vuex.Store<State>({
-    modules: {},
+    modules: {
+        theme,
+    },
     state() {
         return {
             count: 0,

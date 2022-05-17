@@ -24,5 +24,6 @@ module.exports = {
         'import/extensions': 0,
         'vue/multi-word-component-names': 0,
         'vue/no-multiple-template-root': 0,
+        '@typescript-eslint/no-non-null-assertion': 'off',
     },
 };

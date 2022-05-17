@@ -1,11 +1,30 @@
 <script setup lang="ts">
 import { Field, Form, ErrorMessage } from 'vee-validate';
-import { reactive } from 'vue';
+import { reactive, onBeforeMount, watch } from 'vue';
 import * as yup from 'yup';
 import axios from 'axios';
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import { useStore } from 'vuex';
 import HelloWorld from './components/HelloWorld.vue';
+import ThemeToggler from './components/ThemeToggler.vue';
+
+const store = useStore();
+
+onBeforeMount(() => {
+    store.dispatch('initTheme');
+});
+
+watch(
+    () => store.getters.getTheme,
+    (newTheme) => {
+        if (newTheme === 'light') {
+            document.querySelector('html')!.classList.remove('dark');
+        } else {
+            document.querySelector('html')!.classList.add('dark');
+        }
+    }
+);
 
 const state = reactive({
     count: 0,
@@ -23,6 +42,10 @@ axios
 </script>
 
 <template>
+    <div>
+        <ThemeToggler />
+    </div>
+
     <button @click="increment">
         {{ state.count }}
     </button>

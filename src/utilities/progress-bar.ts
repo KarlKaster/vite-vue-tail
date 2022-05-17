@@ -1,13 +1,16 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import nprogress from 'nprogress';
 
-export default (router: any) => {
-    router.beforeEach((_to: any, _from: any, next: any) => {
+const progress = (router: any) => {
+    router.beforeEach(() => {
         nprogress.start();
-        next();
+        return true;
     });
 
-    router.afterEach((_to: any, _from: any, next: any) => {
+    router.afterEach(() => {
         nprogress.done();
-        next();
+        return true;
     });
 };
+
+export default progress;
