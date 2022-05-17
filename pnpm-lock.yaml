@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@iconify/vue': ^3.2.1
+  '@types/nprogress': ^0.2.0
   '@typescript-eslint/eslint-plugin': ^5.23.0
   '@typescript-eslint/parser': ^5.23.0
   '@vitejs/plugin-vue': ^2.3.3
@@ -19,6 +20,7 @@ specifiers:
   husky: ^8.0.1
   jsdom: ^19.0.0
   lighthouse: ^9.6.1
+  nprogress: ^0.2.0
   postcss: ^8.4.13
   postcss-html: ^1.4.1
   sass: ^1.51.0
@@ -44,7 +46,9 @@ specifiers:
   yup: ^0.32.11
 
 dependencies:
+  '@types/nprogress': 0.2.0
   axios: 0.27.2
+  nprogress: 0.2.0
   vee-validate: 4.5.11_vue@3.2.33
   vue: 3.2.33
   vue-axios: 3.4.1_axios@0.27.2+vue@3.2.33
@@ -392,6 +396,10 @@ packages:
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: true
+
+  /@types/nprogress/0.2.0:
+    resolution: {integrity: sha512-1cYJrqq9GezNFPsWTZpFut/d4CjpZqA0vhqDUPFWYKF1oIyBz5qnoYMzR+0C/T96t3ebLAC1SSnwrVOm5/j74A==}
+    dev: false
 
   /@types/parse-json/4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
@@ -3396,6 +3404,10 @@ packages:
     dependencies:
       path-key: 3.1.1
     dev: true
+
+  /nprogress/0.2.0:
+    resolution: {integrity: sha1-y480xTIT2JVyP8urkH6UIq28r7E=}
+    dev: false
 
   /nth-check/2.0.1:
     resolution: {integrity: sha512-it1vE95zF6dTT9lBsYbxvqh0Soy4SPowchj0UBGj/V6cTPnXXtQOPUbhZ6CmGzAD/rW22LQK6E96pcdJXk4A4w==}

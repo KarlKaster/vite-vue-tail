@@ -6,6 +6,10 @@ import store from './store/store';
 import './index.css';
 import router from './router/router';
 import i18n from './i18n';
+import ProgressBar from './utilities/progress-bar';
+import 'nprogress/nprogress.css';
+
+ProgressBar(router);
 
 const app = createApp(App);
 
