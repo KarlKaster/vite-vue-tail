@@ -14,7 +14,6 @@ import Internationalization from './components/I18n.vue';
 const store = useStore();
 
 onBeforeMount(() => {
-    console.log('Hello');
     store.dispatch('initTheme');
 });
 

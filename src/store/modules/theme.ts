@@ -18,7 +18,6 @@ export default {
             const userPrefersDark = window.matchMedia(
                 '(prefers-color-scheme: dark)'
             ).matches;
-            console.log('initTheme ~ userPrefersDark', userPrefersDark);
 
             if (cachedTheme) {
                 document.querySelector('html')?.classList.add(cachedTheme);
