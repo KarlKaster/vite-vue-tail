@@ -3,7 +3,8 @@ import { onBeforeMount, watch } from 'vue';
 import axios from 'axios';
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import { useStore } from 'vuex';
+import { storeToRefs } from 'pinia';
+import { useThemeStore } from './store/theme';
 import HelloWorld from './components/HelloWorld.vue';
 import ThemeToggler from './components/ThemeToggler.vue';
 import IncrementVue from './components/Increment.vue';
@@ -11,27 +12,30 @@ import Form from './components/Form.vue';
 import Iconify from './components/Iconify.vue';
 import Internationalization from './components/I18n.vue';
 
-// const store = useStore();
-
-// onBeforeMount(() => {
-//     store.dispatch('initTheme');
-// });
-
-// watch(
-//     () => store.getters.getTheme,
-//     (newTheme) => {
-//         if (newTheme === 'light') {
-//             document.querySelector('html')!.classList.remove('dark');
-//         } else {
-//             document.querySelector('html')!.classList.add('dark');
-//         }
-//     }
-// );
-
 axios
     .get('https://jsonplaceholder.typicode.com/todos/1')
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     .then((res: any) => console.log(res));
+
+const themeStore = useThemeStore();
+
+const { theme } = storeToRefs(themeStore);
+
+onBeforeMount(() => {
+    themeStore.initTheme();
+});
+
+watch(
+    theme,
+    (newTheme) => {
+        if (newTheme === 'light') {
+            document.querySelector('html')!.classList.remove('dark');
+        } else {
+            document.querySelector('html')!.classList.add('dark');
+        }
+    },
+    { deep: true }
+);
 </script>
 
 <template>
@@ -45,7 +49,7 @@ axios
     </ul>
 
     <router-view />
-    <!-- <ThemeToggler class="m-4" /> -->
+    <ThemeToggler class="m-4" />
     <IncrementVue class="m-4" />
     <Form class="m-4" />
     <Iconify class="m-4" />

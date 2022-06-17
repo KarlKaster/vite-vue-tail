@@ -10,4 +10,12 @@ export const useCounterStore = defineStore('counter', {
             this.counter += value;
         },
     },
+
+    getters: {
+        doubleCount: (state) => state.counter * 2,
+        // the return type **must** be explicitly set for correct type
+        doublePlusOne(): number {
+            return this.doubleCount + 1;
+        },
+    },
 });
