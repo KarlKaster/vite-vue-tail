@@ -25,5 +25,6 @@ module.exports = {
         'vue/multi-word-component-names': 0,
         'vue/no-multiple-template-root': 0,
         '@typescript-eslint/no-non-null-assertion': 'off',
+        'import/prefer-default-export': 'off',
     },
 };

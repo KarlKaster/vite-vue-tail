@@ -11,22 +11,22 @@ import Form from './components/Form.vue';
 import Iconify from './components/Iconify.vue';
 import Internationalization from './components/I18n.vue';
 
-const store = useStore();
+// const store = useStore();
 
-onBeforeMount(() => {
-    store.dispatch('initTheme');
-});
+// onBeforeMount(() => {
+//     store.dispatch('initTheme');
+// });
 
-watch(
-    () => store.getters.getTheme,
-    (newTheme) => {
-        if (newTheme === 'light') {
-            document.querySelector('html')!.classList.remove('dark');
-        } else {
-            document.querySelector('html')!.classList.add('dark');
-        }
-    }
-);
+// watch(
+//     () => store.getters.getTheme,
+//     (newTheme) => {
+//         if (newTheme === 'light') {
+//             document.querySelector('html')!.classList.remove('dark');
+//         } else {
+//             document.querySelector('html')!.classList.add('dark');
+//         }
+//     }
+// );
 
 axios
     .get('https://jsonplaceholder.typicode.com/todos/1')
@@ -45,7 +45,7 @@ axios
     </ul>
 
     <router-view />
-    <ThemeToggler class="m-4" />
+    <!-- <ThemeToggler class="m-4" /> -->
     <IncrementVue class="m-4" />
     <Form class="m-4" />
     <Iconify class="m-4" />

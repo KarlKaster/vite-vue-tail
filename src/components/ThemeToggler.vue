@@ -5,6 +5,9 @@ const store = useStore();
 
 function toggleTheme() {
     store.dispatch('toggleTheme');
+    console.log(store.getters.getCount);
+    store.commit('increment');
+    console.log(store.state.count);
 }
 </script>
 
