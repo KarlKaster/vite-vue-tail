@@ -14,7 +14,7 @@ This template should help get you started developing with Vue 3 and TypeScript i
 
 ## Built in functionality
 
--   Vuex, Vuex-persist - State Management
+-   Pinia - State Management
 -   Vue Router - Client side routing
 -   Vee-validate, yup - form validation
 -   Tailwind - css framework
