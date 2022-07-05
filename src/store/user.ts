@@ -5,6 +5,4 @@ export const useUserStore = defineStore('user', {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         user: [] as any[],
     }),
-
-    persist: true,
 });

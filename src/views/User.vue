@@ -18,6 +18,11 @@ const user = userStore.user[0];
                     >Go to my posts</router-link
                 >
             </li>
+            <li class="p-2 rounded-full border">
+                <router-link :to="{ path: `/users/${user.name.first}/profile` }"
+                    >Go to my profile</router-link
+                >
+            </li>
         </ul>
         <router-view></router-view>
     </div>

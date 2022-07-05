@@ -29,6 +29,10 @@ const routes = [
     },
     { name: 'home', path: '/home', component: Home },
     { name: 'about', path: '/about', component: About },
+    {
+        path: '/:catchAll(.*)*',
+        redirect: { name: 'home' },
+    },
 ];
 
 const router = createRouter({
