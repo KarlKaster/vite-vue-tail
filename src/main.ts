@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import App from './App.vue';
@@ -12,6 +13,7 @@ import 'nprogress/nprogress.css';
 ProgressBar(router);
 
 const pinia = createPinia();
+pinia.use(piniaPluginPersistedstate);
 const app = createApp(App);
 
 app.use(i18n);

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onBeforeMount, watch } from 'vue';
+import { computed, onBeforeMount, onMounted, watch } from 'vue';
 import axios from 'axios';
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
@@ -11,11 +11,23 @@ import IncrementVue from './components/Increment.vue';
 import Form from './components/Form.vue';
 import Iconify from './components/Iconify.vue';
 import Internationalization from './components/I18n.vue';
+import { useUserStore } from './store/user';
 
-axios
-    .get('https://jsonplaceholder.typicode.com/todos/1')
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    .then((res: any) => console.log(res));
+console.clear();
+
+const userStore = useUserStore();
+
+onMounted(() => {
+    axios
+        .get('https://randomuser.me/api/')
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .then((res: any) => {
+            userStore.user = res.data.results;
+            console.log(userStore.user);
+        });
+});
+
+const user = computed(() => userStore.user[0]);
 
 const themeStore = useThemeStore();
 
@@ -46,9 +58,19 @@ watch(
         <li class="p-4 rounded-full border">
             <router-link to="/about">About</router-link>
         </li>
+        <li v-if="user" class="p-4 rounded-full border">
+            <router-link
+                :to="{
+                    name: 'users',
+                    params: { username: user.name.first },
+                }"
+                >/users/{{ user.name.first }}</router-link
+            >
+        </li>
     </ul>
 
     <router-view />
+
     <ThemeToggler class="m-4" />
     <IncrementVue class="m-4" />
     <Form class="m-4" />
