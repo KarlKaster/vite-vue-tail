@@ -25,6 +25,7 @@ const state = reactive({
             <div>
                 <ErrorMessage name="password" />
             </div>
+            <button class="btn btn-square loading"></button>
         </Form>
     </div>
 </template>
