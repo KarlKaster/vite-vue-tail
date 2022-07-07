@@ -11,6 +11,7 @@ import IncrementVue from './components/Increment.vue';
 import Form from './components/Form.vue';
 import Iconify from './components/Iconify.vue';
 import Internationalization from './components/I18n.vue';
+import ProgressBar from './components/ProgressBar.vue';
 import { useUserStore } from './store/user';
 
 console.clear();
@@ -71,6 +72,7 @@ watch(
 
     <router-view />
 
+    <ProgressBar />
     <ThemeToggler class="m-4" />
     <IncrementVue class="m-4" />
     <Form class="m-4" />

@@ -3,6 +3,8 @@ import { createPinia } from 'pinia';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
+// @ts-ignore
+import veProgress from 'vue-ellipse-progress';
 import App from './App.vue';
 import './index.css';
 import router from './router/router';
@@ -20,6 +22,7 @@ app.use(i18n);
 app.use(router);
 app.use(pinia);
 app.use(VueAxios, axios);
+app.use(veProgress);
 app.provide('axios', app.config.globalProperties.axios); // provide 'axios'
 
 app.mount('#app');

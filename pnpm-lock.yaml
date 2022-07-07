@@ -40,6 +40,7 @@ specifiers:
   vitest: ^0.12.6
   vue: ^3.2.25
   vue-axios: ^3.4.1
+  vue-ellipse-progress: ^2.1.1
   vue-i18n: ^9.1.10
   vue-router: '4'
   vue-tsc: ^0.34.7
@@ -56,6 +57,7 @@ dependencies:
   vee-validate: 4.5.11_vue@3.2.33
   vue: 3.2.33
   vue-axios: 3.4.1_axios@0.27.2+vue@3.2.33
+  vue-ellipse-progress: 2.1.1_vue@3.2.33
   vue-i18n: 9.1.10_vue@3.2.33
   vue-router: 4.0.15_vue@3.2.33
   vuex: 4.0.2_vue@3.2.33
@@ -4855,6 +4857,14 @@ packages:
     peerDependenciesMeta:
       '@vue/composition-api':
         optional: true
+    dependencies:
+      vue: 3.2.33
+    dev: false
+
+  /vue-ellipse-progress/2.1.1_vue@3.2.33:
+    resolution: {integrity: sha512-pYLzKbhRJ9+htcMnuF6WyJkNAC2b8g+wy8npYJbwkYSatICft3ezvlinx7G0lBn7+iPBkRbihY6F9Hc+Mbp21Q==}
+    peerDependencies:
+      vue: ^3
     dependencies:
       vue: 3.2.33
     dev: false
