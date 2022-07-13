@@ -12,7 +12,7 @@ const options = {
     thickness: 5,
     'empty-thickness': 3,
     'line-mode': 'out 5',
-    animation: ' 200 350',
+    animation: 'default 200 350',
     'font-size': '1.5rem',
 };
 
